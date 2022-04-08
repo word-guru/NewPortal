@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewPortal.Server", "NewPortal.Server\NewPortal.Server.csproj", "{2B8896F2-1D95-46EE-A44F-1CA72F122BA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewPortal.Server.Lib", "NewPortal.Server.Lib\NewPortal.Server.Lib.csproj", "{A8B71958-235C-4C1A-8DF4-A7B88F5EABD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{2B8896F2-1D95-46EE-A44F-1CA72F122BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B8896F2-1D95-46EE-A44F-1CA72F122BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B8896F2-1D95-46EE-A44F-1CA72F122BA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8B71958-235C-4C1A-8DF4-A7B88F5EABD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B71958-235C-4C1A-8DF4-A7B88F5EABD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B71958-235C-4C1A-8DF4-A7B88F5EABD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B71958-235C-4C1A-8DF4-A7B88F5EABD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
