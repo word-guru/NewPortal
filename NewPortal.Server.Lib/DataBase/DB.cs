@@ -4,6 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Dapper;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
 using NewPortal.Server.Lib.Models;
 
 namespace NewPortal.Server.Lib.DataBase
@@ -42,6 +43,32 @@ namespace NewPortal.Server.Lib.DataBase
             await _connection.CloseAsync();
 
             return users;
+        }
+
+        public async Task<News> GetNewsById(int id)
+        {
+            await _connection.OpenAsync();
+
+            var sql=$"SELECT id, title, content, date_of_creation, author FROM tab_news WHERE id={id}";
+            var news = await _connection.QuerySingleAsync<News>(sql);
+            
+            await _connection.CloseAsync();
+
+            return news;
+        }
+
+        public async Task<bool> InsertNews(News news)
+        {
+            await _connection.OpenAsync();
+
+            var sql =
+                $"INSERT INTO tab_news (title, content, date_of_creation, author) VALUES ('{news.Title}','{news.Content}','{news.DateOfCreation}',{news.Author}); ";
+           var command = new MySqlCommand(sql,_connection);
+           var result  = await command.ExecuteNonQueryAsync();
+
+           await _connection.CloseAsync();
+
+           return result == 1;
         }
         
     }
