@@ -402,3 +402,6 @@ FodyWeavers.xsd
 .idea/
 
 # Конец https://www.toptal.com/developers/gitignore/api/csharp
+
+/NewPortal.Server.Lib/DataBase/connection_to_db.txt
+NewPortal.Server.Test/connection_to_db.txt
