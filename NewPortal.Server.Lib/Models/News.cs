@@ -7,7 +7,7 @@ namespace NewPortal.Server.Lib.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public DateTime DateOfCreation  { get; set; }
+        public DateTime? DateOfCreation  { get; set; }
         public int Author { get; set; }
     }
 }

@@ -5,11 +5,8 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
-<<<<<<< Updated upstream
-=======
     <ItemGroup>
       <ProjectReference Include="..\NewPortal.Lib\NewPortal.Lib.csproj" />
-      <ProjectReference Include="..\NewPortal.Server.Lib\NewPortal.Server.Lib.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -18,5 +15,4 @@
       </None>
     </ItemGroup>
 
->>>>>>> Stashed changes
 </Project>
