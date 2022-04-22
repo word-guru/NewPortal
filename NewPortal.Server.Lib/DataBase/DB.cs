@@ -24,7 +24,8 @@ namespace NewPortal.Server.Lib.DataBase
         {
             await _connection.OpenAsync();
 
-            var sql = "SELECT id, title, content, date_of_creation, author FROM tab_news;";
+           //var sql = "SELECT id, title, content, date_of_creation, author FROM tab_news";
+            var sql = "SELECT id, title, content, author FROM tab_news";
 
             var result = await _connection.QueryAsync<News>(sql);
             

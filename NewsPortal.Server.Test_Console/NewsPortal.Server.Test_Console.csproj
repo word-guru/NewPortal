@@ -7,7 +7,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\NewPortal.Lib\NewPortal.Lib.csproj" />
-      <ProjectReference Include="..\NewPortal.Server.Lib\NewPortal.Server.Lib.csproj" />
     </ItemGroup>
 
     <ItemGroup>

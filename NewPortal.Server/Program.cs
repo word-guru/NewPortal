@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using NewPortal.Server.Lib.DataBase;
-using NewPortal.Server.Lib.Models;
 
 namespace NewPortal.Server
 {
@@ -16,7 +11,7 @@ namespace NewPortal.Server
     {
         private static async Task Main()
         {
-            var server = new TcpListener(IPAddress.Loopback, 8005);
+            var server = new TcpListener(IPAddress.Parse("127.0.0.1"), 65003);
             server.Start();
 
             while (true)
@@ -24,7 +19,7 @@ namespace NewPortal.Server
                 var client = await server.AcceptTcpClientAsync();
                 var clientStream = client.GetStream();
 
-                var requestRaw = await GetRequest(clientStream);
+                var requestRaw = await Message.GetRequest(clientStream);
                 var request = JsonSerializer.Deserialize<Request>(requestRaw);
 
                 switch (request?.Type)
@@ -47,28 +42,9 @@ namespace NewPortal.Server
             var db = new DB();
             var news = await db.GetAllNews();
 
-            SendData(news, stream);
+            Message.SendData(news, stream);
         }
 
-        private static async Task SendData(object value, Stream stream)
-        {
-            var sendRaw = JsonSerializer.Serialize(value,value.GetType());
-            var data = Encoding.Unicode.GetBytes(sendRaw);
-            await stream.WriteAsync(data, 0, data.Length);
-        }
-        
-        private static async Task<string> GetRequest(NetworkStream stream)
-        {
-            var builder = new StringBuilder();
-            int bytes = 0;
-            var data = new byte[64];
-            do
-            {
-                bytes = await stream.ReadAsync(data, 0, data.Length);
-                builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
-            } while (stream.DataAvailable);
-            
-            return builder.ToString();
-        }
+       
     }
 }

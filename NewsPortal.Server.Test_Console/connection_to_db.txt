@@ -1,0 +1,1 @@
+﻿Server=mysql60.hostland.ru;Database=host1323541_news;Uid=host1323541_newsadmin;Pwd=zqlkP0Po;

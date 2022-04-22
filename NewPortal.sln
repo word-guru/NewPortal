@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewPortal.Server.Lib", "New
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewPortal.Server.Test", "NewPortal.Server.Test\NewPortal.Server.Test.csproj", "{8B122FB1-0E18-40F6-80A3-6222A19BB8D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsPortal.Server.Test_Console", "NewsPortal.Server.Test_Console\NewsPortal.Server.Test_Console.csproj", "{21EAF9D5-333F-48C2-A8A8-8F228E41065F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewPortal.Lib", "NewPortal.Lib\NewPortal.Lib.csproj", "{E244E052-CC00-440B-97FF-ED49E2CF2CEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{8B122FB1-0E18-40F6-80A3-6222A19BB8D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B122FB1-0E18-40F6-80A3-6222A19BB8D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B122FB1-0E18-40F6-80A3-6222A19BB8D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EAF9D5-333F-48C2-A8A8-8F228E41065F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EAF9D5-333F-48C2-A8A8-8F228E41065F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EAF9D5-333F-48C2-A8A8-8F228E41065F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EAF9D5-333F-48C2-A8A8-8F228E41065F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E244E052-CC00-440B-97FF-ED49E2CF2CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E244E052-CC00-440B-97FF-ED49E2CF2CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E244E052-CC00-440B-97FF-ED49E2CF2CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E244E052-CC00-440B-97FF-ED49E2CF2CEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
